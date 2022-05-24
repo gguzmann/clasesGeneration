@@ -20,7 +20,8 @@ public class CalcularPromedio {
 
 		// promedio: suma total de notas / cantidad de notas
 		float promedioNotas = (float) sumaTotal / notas.length;
-
+		System.out.println("asdsad");
+		
 		// Aprobado: < 49 & > 101
 		// Reprobado: <= 0 & > 50
 		if (promedioNotas >= 0 && promedioNotas < 50) {
