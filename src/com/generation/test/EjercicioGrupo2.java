@@ -24,6 +24,7 @@ public class EjercicioGrupo2 {
 			System.out.println("Ingre un numero mayor para el limite superior");
 			superior = sc.nextInt();
 
+			
 			if (superior < inferior) {
 				System.out.println("Limite inferior mayor al superior. Ingrese numeros validos");
 			}
