@@ -5,11 +5,15 @@ public class Alumno {
 	// Atributo
 	private String nombre;
 	private String apellido;
-	private Integer edad;
-	private Integer curso;
+	private int edad;
+	private String curso;
 
 	// Constructor
-	public Alumno(String nombre, String apellido, Integer edad, Integer curso) {
+	public Alumno() {
+	
+	}
+
+	public Alumno(String nombre, String apellido, Integer edad, String curso) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -21,38 +25,42 @@ public class Alumno {
 	public String getNombre() {
 		return nombre;
 	}
-	
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
+
 	public String getApellido() {
 		return apellido;
 	}
-	
+
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	
-	public Integer gerEdad() {
+
+	public Integer getEdad() {
 		return edad;
 	}
-	
+
 	public void setEdad(Integer edad) {
 		this.edad = edad;
 	}
-	
-	public Integer gerCurso() {
+
+	public String getCurso() {
 		return curso;
 	}
-	
-	public void setCurso(Integer curso) {
+
+	public void setCurso(String curso) {
 		this.curso = curso;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", curso=" + curso + "]";
+	}
+
 	// Metodos
 
+	
+	
 }

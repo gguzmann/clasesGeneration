@@ -5,7 +5,8 @@ public class Auto {
 	// Objeto -> Es la instancia de una clase.
 
 	// Atributos
-	// Accese - Tipo - Nombre - Valor
+	// Acceso - Tipo - Nombre - Valor
+	//ACCESO : public - private - protected -> Encapsulamiento de variables.
 	private String color;
 	private String marca;
 	private String modelo;
