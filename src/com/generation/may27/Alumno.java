@@ -55,6 +55,7 @@ public class Alumno {
 	}
 
 	@Override
+	// SOBRE ESCRIBE METODO TOSTRING: REPRESENTA EL OBJ CON UN STR
 	public String toString() {
 		return "Alumno [nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", curso=" + curso + "]";
 	}

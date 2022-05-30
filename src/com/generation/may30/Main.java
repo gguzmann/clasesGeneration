@@ -6,7 +6,8 @@ import java.util.List;
 import com.generation.may27.Alumno;
 
 public class Main {
-
+	// Interfaces -> Solo definen los metodos
+	// 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Interfaz
@@ -28,7 +29,7 @@ public class Main {
 		System.out.println(grupo2.toString());
 		
 		for (Alumno alumno2 : grupo2) {
-			System.out.println(alumno2.toString());
+			System.out.println(alumno2);
 		}
 		
 		for (int i = 0; i < grupo2.size(); i++) {
