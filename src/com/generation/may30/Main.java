@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.generation.may27.Alumno;
+import com.generation.may31.Cliente;
 
 public class Main {
 	// Interfaces -> Solo definen los metodos
@@ -65,6 +66,12 @@ public class Main {
 		System.out.println(cata.toString());
 		System.out.println(nico.toString());
 		*/
+		
+
+		Cliente cliente = new Cliente();
+		
+		
+		
 	}
 	
 	public static void printNames(Alumno alumno)
