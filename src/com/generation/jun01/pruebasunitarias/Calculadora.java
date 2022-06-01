@@ -21,4 +21,16 @@ public class Calculadora {
 		}
 		return "No se puede dividir por 0";
 	}
+	
+	public Boolean isPar(int numero1) {
+		if(numero1 % 2 == 0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	//isPar
+	//isImpar
+
 }
