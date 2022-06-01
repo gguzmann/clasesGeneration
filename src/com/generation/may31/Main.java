@@ -18,48 +18,55 @@ public class Main {
 		List<Cliente> listaCliente = new ArrayList<Cliente>();
 
 		do {
-			Cliente cliente = new Cliente();
-			try {
-				System.out.println("Ingrese ID de Cliente");
-				String idString = sc.nextLine();
-				//Integer id = sc.nextInt();
-				Integer id = Integer.parseInt(idString);
-				cliente.setId(id);
-				//sc.nextLine();
-
-				System.out.println("Ingrese Nombre de Cliente");
-				String nombre = sc.nextLine();
-				cliente.setNombre(nombre);
-
-				System.out.println("Ingrese Rut de Cliente");
-				String rut = sc.nextLine();
-				cliente.setRut(rut);
-
-			} catch (NullPointerException npe) {
-				System.out.println("No se puede realizar la operacion matematica, un dato es nulo");
-			} catch (InputMismatchException ime) {
-				System.out.println("Error en el ingreso de un dato");
-			} catch (NumberFormatException nfe) {
-				System.out.println("No puede ingresar un letra como identificador " + nfe);
-			} catch (Exception e) {
-				System.out.println("Ha ocurrido un error, contecte al administrador " + e);
+			//EXCEPCIONES
+			//PEDIR DATOS MEDIANTE SCANNER
+			Cliente clienteDatosDinamicos = new Cliente();
+			System.out.println("Ingrese id de cliente");
+			//Integer id = sc.nextInt(); //CAPTURAR VALOR, CREAR VARIABLE + SCANNER
+			String idString = sc.nextLine();
+			
+			//SIRVE PARA CONTROLAR ERROR DE CONVERSION,ENVIA MENSAJE DE ERROR MAS CLARO
+			try {//EJ: si se ingresa dato abc, no se puede transformar a int
+				Integer id = Integer.parseInt(idString);//transformar string a inter
+				//id+1 para verifica error
+				clienteDatosDinamicos.setId(id);//ASIGNAR CON SET VARIABLE ID
+				
+			}catch(NumberFormatException nfe) {//informa error especifico
+				System.out.println("No puede ingresar letra como identificador" + nfe);
+				
+			} catch (Exception e) {//e es una variable tipo excepcion, es generico
+				System.out.println("Comuniquese con el administrador" + e);
+				//System.out.println("No puede ingresar letra como identificador" + e.getMessage());//getMessage acorta mensaje a indicar
 			}
-
-			//System.out.println(cliente.toString());
-
-			listaCliente.add(cliente);
-			
-			
-			
-			do {
-				System.out.println("Ingresar nuevo Cliente? (1) Si (2) No");
-				opcion = sc.nextInt();
-			} while (opcion < 1 || opcion > 2);
-
-			sc.nextLine();
-		} while (opcion == 1);
+			 sc.nextLine();//finalizar con sc.next
 		
+			
+			System.out.println("Ingrese nombre de cliente");
+			String nombre = sc.nextLine(); //CAPTURAR VALOR, CREAR VARIABLE + SCANNER
+			clienteDatosDinamicos.setNombre(nombre);//ASIGNAR CON SET VARIABLE NOMBRE
+		    sc.nextLine(); //agregar en caso de que no tome la instrucion 
+			
+			
+			System.out.println("Ingrese correo de cliente");
+			String correo= sc.nextLine();//CAPTURAR VALOR, CREAR VARIABLE + SCANNER
+			clienteDatosDinamicos.setCorreo(correo);//ASIGNAR CON SET VARIABLE CORREO o Integer.parseInt(sc.nextLine();
 
+			
+			System.out.println("Ingrese rut de cliente");
+			String rut = sc.nextLine();//CAPTURAR VALOR, CREAR VARIABLE + SCANNER
+			clienteDatosDinamicos.setRut(rut);//ASIGNAR CON SET VARIABLE CORREO
+			
+			//Integer division = 100/0;
+			//System.out.println(division);
+			
+			listaCliente.add(clienteDatosDinamicos);//AGREGAR CLIENTES A LA LISTA
+			
+			//Dar opcion al cliente con sysou
+			System.out.println("Desea ingresar un nuevo cliente (1) si (0) no");
+			opcion = sc.nextInt();//crear variable de opcion para pedir datos
+			sc.nextLine();
+			} while(opcion == 1);
+		
 		cm.printArray(listaCliente);
 	}
 
